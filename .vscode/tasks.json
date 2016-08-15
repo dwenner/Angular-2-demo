@@ -9,6 +9,10 @@
     "tasks": [
         {
             "taskName": "build",
+            "args": ["run", "tsc"]
+        },
+        {
+            "taskName": "start",
             "args": ["start"]
         },
         {
