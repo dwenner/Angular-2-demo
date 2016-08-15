@@ -38,7 +38,7 @@ describe('AppComponent with TCB', function () {
 
           h1 = fixture.debugElement.query(By.css('h1')).nativeElement;            // preferred
 
-      expect(h1.innerText).toMatch(/angular 2 app/i, '<h1> should say something about "Angular 2 App"');
+      expect(h1.innerText).toMatch(/Customer App/i, '<h1> should say something about "Customer App"');
     });
 
   })));
