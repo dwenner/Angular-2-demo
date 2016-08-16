@@ -1,3 +1,6 @@
 <h1>{{title}}</h1>
 <p [style.color]="danielsFarge">Hello {{name}}</p>
+
+<input type="text" [value]="name" (keyup.enter)="changeMyName($event)" />
+
 <button (click)="changeSuitColor()">Change the color</button>
