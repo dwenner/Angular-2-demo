@@ -4,6 +4,8 @@
 <input type="text" [value]="name" (keyup.enter)="changeMyName($event)" />
 
 <!--template reference variable-->
-<input type="text" #inputRef [value]="name" (keyup)="name=inputRef.value" / >
+<input type="text" #inputRef [value]="name" (keyup)="name=inputRef.value" />
+
+<input type="text" [(ngModel)]="name" />
 
 <button (click)="changeSuitColor()">Change the color</button>
