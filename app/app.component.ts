@@ -11,15 +11,7 @@ export class AppComponent {
     danielsFarge = "blue";
     title = "Customer App";
     name = "Daniel";
-
-    customers = [
-        { id: 1, name: "Daniel" },
-        { id: 2, name: "Lars" },
-        { id: 3, name: "Hillary" },
-        { id: 4, name: "Donald" },
-        { id: 5, name: "Bill" },
-    ];
-
+    
     changeSuitColor() {
         let defaultColor = "blue";
         this.danielsFarge = this.danielsFarge === defaultColor ? 'red' : defaultColor
