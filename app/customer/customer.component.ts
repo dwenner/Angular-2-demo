@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-    selector: 'customer',
+    selector: 'app-customer',
     template: `
        <span [style.color]="danielsFarge">{{customer.id}}</span>&nbsp;
        <span>{{customer.name}}</span>
@@ -10,10 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CustomerComponent implements OnInit {
     @Input() customer: { id: number, name: string };
 
-    constructor(id: number, name: string) { }
+    constructor() { }
 
     ngOnInit() {
-
+        
     }
 
 }
