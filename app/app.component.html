@@ -3,4 +3,7 @@
 
 <input type="text" [value]="name" (keyup.enter)="changeMyName($event)" />
 
+<!--template reference variable-->
+<input type="text" #inputRef [value]="name" (keyup)="name=inputRef.value" / >
+
 <button (click)="changeSuitColor()">Change the color</button>
