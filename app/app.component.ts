@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import {CustomerComponent} from './customer/customer.component';
 
 
 @Component({
     selector: 'my-app',
-    template: `<h1>{{title}}</h1>
-                <p [style.color]="danielsFarge">Hello {{name}}</p>
-               `
+    templateUrl: 'app/app.component.html',
+    directives: []
 })
 export class AppComponent {
     // [ ] er property binding - Component til DOM
@@ -20,7 +20,7 @@ export class AppComponent {
         { id: 2, name: "Lars" },
         { id: 3, name: "Hillary" },
         { id: 4, name: "Donald" },
-        { id: 5, name: "Bill" }
+        { id: 5, name: "Bill" },
     ];
 
     changeSuitColor() {
