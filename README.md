@@ -1,6 +1,6 @@
 # Angular 2 Demo
 
-Basert på Angular 2 quick start og Play by Play: Angular 2 Quick Start with John Papa and Ward Bell[https://app.pluralsight.com/courses/play-by-play-angular-2-quick-start-john-papa-ward-bell]
+Basert på Angular 2 quick start og [Play by Play: Angular 2 Quick Start with John Papa and Ward Bell](https://app.pluralsight.com/courses/play-by-play-angular-2-quick-start-john-papa-ward-bell)
 
 Orginal readme fra angular 2 QuickStart nedenfor...
 
