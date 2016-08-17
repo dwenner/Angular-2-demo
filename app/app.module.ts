@@ -5,14 +5,12 @@ import { HttpModule } from '@angular/http'; //HTTP
 import 'rxjs/Rx'; //Everything from rx;
 
 import { AppComponent }  from './app.component';
-import {CustomerComponent} from './customer/customer.component';
-import {CustomersComponent} from './customer/customers.component';
-import {CustomerService} from './customer/customer.service';
+import { DashboardComponent} from './dashboard/dashboard.component';
+import { CustomerModule } from './customer/customer.module';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, HttpModule ],
-  providers: [CustomerService], //Global CustomerService singleton. Providers også mulig lenger nede for ny instans
-  declarations: [ AppComponent, CustomerComponent, CustomersComponent ],
+  imports: [ BrowserModule, FormsModule, HttpModule, CustomerModule ],
+  declarations: [ AppComponent, DashboardComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

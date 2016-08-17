@@ -1,15 +1,7 @@
 <h1>{{title}}</h1>
-<p [style.color]="danielsFarge">Hello {{name}}</p>
-
-<input type="text" [value]="name" (keyup.enter)="changeMyName($event)" />
-
-<!--template reference variable-->
-<input type="text" #inputRef [value]="name" (keyup)="changeMyNameWithValue(inputRef.value)" />
-
-<input type="text" [(ngModel)]="name" />
-
-<button (click)="changeSuitColor()">Change the color</button>
-
-<hr/>
-
-<app-customers [outer-color]="danielsFarge"></app-customers>
+<dashboard 
+        [user-name]="name" 
+        [favorite-color]="danielsFarge" 
+        (colorUpdated)="onColorUpdated($event)"
+        (userUpdated)="onNameUpdated($event)">
+</dashboard>
