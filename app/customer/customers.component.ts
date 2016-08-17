@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
     selector: 'app-customers',
     template: `
             <ul>
-                <li *ngFor="let c of customers | async">
+                <li *ngFor="let c of customers">
                 <app-customer [customer]="c" [my-color]="color"></app-customer>
                 </li>
             </ul>
@@ -17,13 +17,15 @@ import { Observable } from 'rxjs/Rx';
 export class CustomersComponent implements OnInit {
     @Input("outer-color") color: string;
 
-    customers: Promise<any[]>;
+    customers: any[];
     unhandledError = false;
 
     constructor(private _customerService: CustomerService) { }
 
     ngOnInit() {
-        this.customers = this._customerService.getCustomers();
+        this._customerService.getCustomers().then((data) => {
+            this.customers = data;
+        });
     }
 
 

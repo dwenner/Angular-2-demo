@@ -11,7 +11,7 @@ export class CustomerService {
     constructor(private _http: Http) { }
 
     getCustomers() {
-        //Merk at .map på Obervavle er en del av RxJS
+        //Merk at .map på Observable er en del av RxJS
         let response = this._http.get(URL_CUSTOMER).map(
             (response: Response) => response.json())
             .toPromise()
@@ -22,7 +22,7 @@ export class CustomerService {
     }
 
     getCustomers_RxObservable() {
-        //Merk at .map på Obervavle er en del av RxJS
+        //Merk at .map på Observable er en del av RxJS
         let response = this._http.get(URL_CUSTOMER).map(
             (response: Response) => response.json()
         ).catch(this._handleError);
