@@ -17,18 +17,23 @@ import { Observable } from 'rxjs/Rx';
 export class CustomersComponent implements OnInit {
     @Input("outer-color") color: string;
 
-    customers: Observable<any[]>;
+    customers: Promise<any[]>;
     unhandledError = false;
 
     constructor(private _customerService: CustomerService) { }
 
     ngOnInit() {
-        this.customers = this._customerService.getCustomers()
+        this.customers = this._customerService.getCustomers();
+    }
+
+
+
+    //RXObservable
+    /*this.customers = this._customerService.getCustomers()
         .catch((err) => {
             console.error("From component: ", err);
             this.unhandledError = true;
             var response = Observable.of([true]);
             return response;
-        });
-    }
+        });*/
 }
