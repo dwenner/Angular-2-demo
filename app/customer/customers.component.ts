@@ -23,12 +23,20 @@ export class CustomersComponent implements OnInit {
     constructor(private _customerService: CustomerService) { }
 
     ngOnInit() {
-        this._customerService.getCustomers().then((data) => {
-            this.customers = data;
-        });
+        this._customerService.getCustomers_RxObservable()
+            .subscribe(
+            //Det fungerer!
+            (customers) => this.customers = customers,
+            //Det fungeer ikke!
+            (error) => this.unhandledError = true
+            );
     }
 
-
+    //Old promise way. 
+    /*
+          this._customerService.getCustomers().then((data) => {
+                this.customers = data;
+            });*/
 
     //RXObservable
     /*this.customers = this._customerService.getCustomers()
