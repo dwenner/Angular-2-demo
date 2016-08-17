@@ -1,12 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {CustomerService} from './customer.service';
+import { CustomerService } from './customer.service';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     moduleId: module.id,
     selector: 'app-customers',
     template: `
             <ul>
-                <li *ngFor="let c of customers">
+                <li *ngFor="let c of customers | async">
                 <app-customer [customer]="c" [my-color]="color"></app-customer>
                 </li>
             </ul>
@@ -15,7 +16,7 @@ import {CustomerService} from './customer.service';
 export class CustomersComponent implements OnInit {
     @Input("outer-color") color: string;
 
-    customers: any[];
+    customers: Observable<any[]>;
 
     constructor(private _customerService: CustomerService) { }
 
