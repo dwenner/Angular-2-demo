@@ -1,5 +1,12 @@
+# Angular 2 Demo
+
+Basert på Angular 2 quick start og Play by Play: Angular 2 Quick Start with John Papa and Ward Bell[https://app.pluralsight.com/courses/play-by-play-angular-2-quick-start-john-papa-ward-bell]
+
+Orginal readme fra angular 2 QuickStart nedenfor...
+
+------------------------
+
 # Angular 2 QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
 
 This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
 the foundation for most of the documentation samples and potentially a good starting point for your application.
