@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {CustomerService} from './customer.service';
 
 @Component({
     selector: 'app-customer',
@@ -10,13 +9,10 @@ import {CustomerService} from './customer.service';
 })
 export class CustomerComponent implements OnInit {
     @Input() customer: { id: number, name: string };
-    @Input() myColor: string;
+    @Input('my-color') myColor: string;
 
-    customers: any[];
+    constructor() { }
 
-    constructor(private _customerService: CustomerService) { }
+    ngOnInit() { }
 
-    ngOnInit() {
-        this.customers = this._customerService.getCustomers();
-    }
 }
